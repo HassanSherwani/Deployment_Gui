@@ -1,2 +1,2 @@
 # Deployment_Gui
-using aws-EC2 instance
+Extracting information from flask web service using aws-EC2 instance
