@@ -9,6 +9,7 @@ import os, json, ast
 import glob
 import docx2txt
 import requests
+import json
 from json2html import *
 
 app = Flask(__name__)
@@ -134,7 +135,7 @@ def read_files(filename):
             output = docx2txt.process(filename)
 
         else:
-            output = "Diese Datei kann nicht im Browser angezeigt werden."
+            output = "This file cannot be viewed in the browser."
     else:
         if str(filename).endswith("txt"):
             with open("uploads/"+filename, "r") as reader:
@@ -144,7 +145,7 @@ def read_files(filename):
             output = docx2txt.process("uploads/"+filename)
 
         else:
-            output = "Diese Datei kann nicht im Browser angezeigt werden."
+            output = "This file cannot be viewed in the browser."
 
     return output
 
